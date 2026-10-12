@@ -1,0 +1,13 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Temporary scripts
+copy_image.py
+copy_image.bat
+commit.bat
+push.bat
+
+# Editor folders
+.vscode/
+.idea/

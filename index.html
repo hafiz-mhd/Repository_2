@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A R Hafiz Muhammed - Portfolio. Computer Science Graduate, Frontend Developer & AI/ML Specialist building modern, high-performance digital experiences.">
+  <meta name="author" content="A R Hafiz Muhammed">
+  <meta name="theme-color" content="#080B16">
+  
+  <title>A R Hafiz Muhammed | Engineer • Frontend & AI Specialist</title>
+  
+  <!-- Branded Monogram Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%235B8CFF'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='800' font-size='48'>AR</text></svg>">
+  
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Spotlight Follower (4D Lighting Illusion) -->
+  <div class="ambient-spotlight" id="ambientSpotlight" aria-hidden="true"></div>
+
+  <!-- Background Particle & Grid Canvas -->
+  <div class="canvas-container" aria-hidden="true">
+    <canvas id="heroCanvas"></canvas>
+    <div class="grid-overlay"></div>
+    <div class="vignette-overlay"></div>
+  </div>
+
+  <!-- ========================================================
+       1. NAVIGATION BAR
+       ======================================================== -->
+  <header class="site-header" id="navbar">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <!-- Monogram / Brand Logo -->
+      <a href="#home" class="nav-logo" aria-label="A R Hafiz Muhammed Home">
+        <span class="logo-mark">AR</span>
+        <span class="logo-text">A R Hafiz Muhammed</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA in Header -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-glass">
+          <span>Let's Talk</span>
+          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================================================
+         2. HERO SECTION — CINEMATIC INTRODUCTION
+         ======================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <!-- Live Status Tag -->
+          <div class="status-badge reveal-item" data-delay="100">
+            <span class="pulse-dot"></span>
+            <span>Available for Full-time Roles & Innovations</span>
+          </div>
+
+          <!-- Introduction & Headline -->
+          <!-- EDITABLE: Change your name and primary title below -->
+          <h1 class="hero-title reveal-item" data-delay="200">
+            <span class="greeting-prefix">Hi, I'm</span>
+            <span class="highlight-name">A R Hafiz Muhammed</span>
+          </h1>
+
+          <p class="hero-headline reveal-item" data-delay="300">
+            Building Digital Experiences That Move Beyond Ordinary.
+          </p>
+
+          <p class="hero-description reveal-item" data-delay="400">
+            Computer Science Graduate & Full-Stack Developer specializing in responsive frontend architectures, Agentic AI, and scalable backend platforms. Passionate about engineering high-impact digital solutions with cinematic attention to detail.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta-group reveal-item" data-delay="500">
+            <a href="#projects" class="btn btn-primary btn-magnetic" id="heroExploreBtn">
+              <span>Explore My Work</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            
+            <a href="#contact" class="btn btn-secondary btn-magnetic" id="heroContactBtn">
+              <span>Contact Me</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats reveal-item" data-delay="600">
+            <div class="stat-item">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Full-Stack Projects</span>
+            </div>
+            <div class="stat-separator"></div>
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Internship Tracks</span>
+            </div>
+            <div class="stat-separator"></div>
+            <div class="stat-item">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Published Patent</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Profile Frame & Hologram -->
+        <div class="hero-visual reveal-item" data-delay="350">
+          <div class="visual-wrapper" id="heroVisualTilt" data-tilt>
+            <!-- Outer Geometric Orbit Rings -->
+            <div class="orbit-ring orbit-ring-1" aria-hidden="true"></div>
+            <div class="orbit-ring orbit-ring-2" aria-hidden="true"></div>
+            
+            <!-- Floating 4D Floating Hologram Cards -->
+            <div class="floating-pill pill-ai" aria-hidden="true">
+              <div class="pill-icon">✨</div>
+              <div class="pill-text">
+                <small>Specialization</small>
+                <strong>Agentic AI & RAG</strong>
+              </div>
+            </div>
+
+            <!-- Profile Media Card / Frame -->
+            <div class="profile-card">
+              <div class="profile-frame">
+                <img src="profile.jpg" alt="A R Hafiz Muhammed" class="profile-img" id="heroProfileImg">
+                <div class="profile-overlay-glow"></div>
+                <div class="scanline"></div>
+              </div>
+              <div class="profile-caption">
+                <span class="caption-name">A R Hafiz Muhammed</span>
+                <span class="caption-role">CSE Graduate • Developer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+        <span class="mouse-icon">
+          <span class="wheel"></span>
+        </span>
+        <span class="scroll-text">SCROLL TO DISCOVER</span>
+      </a>
+    </section>
+
+    <!-- ========================================================
+         3. ABOUT SECTION
+         ======================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">ABOUT ME</span>
+          <h2 class="section-title">Driven by Innovation & Intelligent Design</h2>
+          <p class="section-subtitle">Bridging the gap between cutting-edge Artificial Intelligence and polished web applications.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Biography Column -->
+          <div class="about-bio-card card-glass" data-tilt>
+            <div class="bio-badge">ENGINEERING BACKGROUND</div>
+            <h3 class="bio-heading">Solving Real-World Problems with Elegance and Code</h3>
+            
+            <!-- EDITABLE: Update your personal bio here -->
+            <p class="bio-paragraph">
+              I am a <strong>Computer Science and Engineering graduate</strong> from Saintgits College of Engineering with hands-on experience across software development, frontend engineering, and AI / Machine Learning.
+            </p>
+            <p class="bio-paragraph">
+              Having completed technical internships with <strong>NeST Digital</strong> (Angular frontend development) and <strong>KELTRON</strong> (Machine Learning fundamentals), along with specialized immersion in <strong>Agentic AI</strong> via Edunet Foundation, I thrive at turning complex requirements into seamless, intuitive products.
+            </p>
+
+            <div class="bio-highlights">
+              <div class="bio-highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                  <strong>Patent Holder</strong>
+                  <p>Co-inventor of published patent <em>"POT ALERT: SPOT, ALERT, AND REACT"</em> (AI pothole detection).</p>
+                </div>
+              </div>
+
+              <div class="bio-highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                </div>
+                <div>
+                  <strong>Agile Practitioner</strong>
+                  <p>Experienced in fast sprint cycles, code reviews, and enterprise REST API integration.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download / Action link -->
+            <div class="bio-actions">
+              <a href="#contact" class="btn btn-outline">
+                <span>Connect With Me</span>
+              </a>
+              <a href="#experience" class="btn btn-text">
+                <span>View Full Timeline &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Three Compact Pillar Cards -->
+          <div class="about-pillars">
+            <!-- Pillar 1: Background -->
+            <!-- EDITABLE: Pillar descriptions -->
+            <div class="pillar-card card-glass" data-tilt>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <h4 class="pillar-title">Academic & Technical Foundation</h4>
+              <p class="pillar-desc">
+                B.Tech in Computer Science & Engineering with strong analytical foundations in data structures, algorithms, relational databases, and systems architecture.
+              </p>
+            </div>
+
+            <!-- Pillar 2: What I Do -->
+            <div class="pillar-card card-glass" data-tilt>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h4 class="pillar-title">What I Build</h4>
+              <p class="pillar-desc">
+                Full-stack web solutions using React, Angular, and FastAPI, alongside Retrieval-Augmented Generation (RAG) agents, computer vision, and automated web scraping systems.
+              </p>
+            </div>
+
+            <!-- Pillar 3: Goal & Vision -->
+            <div class="pillar-card card-glass" data-tilt>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              </div>
+              <h4 class="pillar-title">My Professional Goal</h4>
+              <p class="pillar-desc">
+                To collaborate with visionary teams where high-standard engineering, human-centered UI/UX, and emerging artificial intelligence merge to deliver measurable value.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. SKILLS SECTION
+         ======================================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">TECHNICAL ARSENAL</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Structured proficiencies honed through production internships, university research, and live projects.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card card-glass" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="pill-dot"></span>Python</span>
+              <span class="skill-pill"><span class="pill-dot"></span>JavaScript (ES6+)</span>
+              <span class="skill-pill"><span class="pill-dot"></span>TypeScript</span>
+              <span class="skill-pill"><span class="pill-dot"></span>SQL</span>
+              <span class="skill-pill"><span class="pill-dot"></span>C</span>
+            </div>
+            <div class="category-footer">Core problem solving, asynchronous workflows, and API handlers.</div>
+          </div>
+
+          <!-- Category 2: Frontend Development -->
+          <div class="skill-category-card card-glass" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <h3 class="category-title">Frontend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="pill-dot"></span>React.js</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Angular</span>
+              <span class="skill-pill"><span class="pill-dot"></span>HTML5 Semantic</span>
+              <span class="skill-pill"><span class="pill-dot"></span>CSS3 & 3D Transforms</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Responsive UI/UX</span>
+            </div>
+            <div class="category-footer">Component lifecycle, responsive grids, and design system integration.</div>
+          </div>
+
+          <!-- Category 3: Backend Development -->
+          <div class="skill-category-card card-glass" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+              <h3 class="category-title">Backend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="pill-dot"></span>FastAPI</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Flask</span>
+              <span class="skill-pill"><span class="pill-dot"></span>RESTful APIs</span>
+              <span class="skill-pill"><span class="pill-dot"></span>SQLAlchemy</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Authentication & JWT</span>
+            </div>
+            <div class="category-footer">High-throughput endpoint creation, data serialization, and secure routes.</div>
+          </div>
+
+          <!-- Category 4: Databases -->
+          <div class="skill-category-card card-glass" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="category-title">Databases & Storage</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="pill-dot"></span>PostgreSQL</span>
+              <span class="skill-pill"><span class="pill-dot"></span>MySQL</span>
+              <span class="skill-pill"><span class="pill-dot"></span>SQLite</span>
+              <span class="skill-pill"><span class="pill-dot"></span>ChromaDB (Vector DB)</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Firebase</span>
+            </div>
+            <div class="category-footer">Relational schemas, indexing, vector similarity search, and cloud storage.</div>
+          </div>
+
+          <!-- Category 5: AI & Machine Learning -->
+          <div class="skill-category-card card-glass" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.5 7.5"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <h3 class="category-title">AI & Machine Learning</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="pill-dot"></span>Agentic AI</span>
+              <span class="skill-pill"><span class="pill-dot"></span>RAG Architectures</span>
+              <span class="skill-pill"><span class="pill-dot"></span>YOLOv8 Computer Vision</span>
+              <span class="skill-pill"><span class="pill-dot"></span>OpenCV</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Prompt Engineering</span>
+              <span class="skill-pill"><span class="pill-dot"></span>HuggingFace Embeddings</span>
+            </div>
+            <div class="category-footer">Semantic matching, autonomous agents, and object recognition pipelines.</div>
+          </div>
+
+          <!-- Category 6: Tools & Technologies -->
+          <div class="skill-category-card card-glass" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3 class="category-title">Tools & Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><span class="pill-dot"></span>Git & GitHub</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Linux Environment</span>
+              <span class="skill-pill"><span class="pill-dot"></span>VS Code</span>
+              <span class="skill-pill"><span class="pill-dot"></span>MobaXterm</span>
+              <span class="skill-pill"><span class="pill-dot"></span>Selenium & Scrapy</span>
+              <span class="skill-pill"><span class="pill-dot"></span>IBM Cloud & SkillsBuild</span>
+            </div>
+            <div class="category-footer">Version control, automated testing, scraping crawlers, and shell tooling.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. PROJECTS SECTION — 4D HORIZONTAL SLIDER
+         ======================================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">PORTFOLIO HIGHLIGHTS</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications spanning AI-driven applicant screening, intelligent travel planners, patented vision systems, and automated scrapers.</p>
+        </div>
+
+        <!-- 3D Slider Viewport Wrapper -->
+        <div class="slider-wrapper" id="projectSliderWrapper" tabindex="0" aria-label="Featured Projects 3D Slider. Use Arrow Left and Arrow Right keys to navigate slides.">
+          
+          <!-- Slider Track with 3D Depth -->
+          <div class="slider-track" id="sliderTrack">
+            
+            <!-- PROJECT SLIDE 1: HireSense AI -->
+            <!-- EDITABLE: Replace content, links, or screenshots -->
+            <article class="project-slide" data-index="0">
+              <div class="project-card card-glass">
+                
+                <!-- Preview Visual / Artwork -->
+                <div class="project-visual">
+                  <div class="project-art-preview art-ai-resume">
+                    <div class="art-badge">FEATURED • AI PLATFORM</div>
+                    <div class="art-ui-sim">
+                      <div class="art-ui-header">
+                        <span class="ui-dot dot-r"></span>
+                        <span class="ui-dot dot-y"></span>
+                        <span class="ui-dot dot-g"></span>
+                        <span class="ui-title">HireSense AI — Recruitment Engine</span>
+                      </div>
+                      <div class="art-ui-body">
+                        <div class="ui-stat-box">
+                          <span class="ui-stat-label">Semantic Match Score</span>
+                          <span class="ui-stat-val">96.8%</span>
+                          <div class="ui-meter"><div class="ui-meter-fill" style="width: 96.8%;"></div></div>
+                        </div>
+                        <div class="ui-tags-row">
+                          <span class="ui-mini-tag">ATS Parsed</span>
+                          <span class="ui-mini-tag">RAG Analyzed</span>
+                          <span class="ui-mini-tag">Questions Generated</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Content Details -->
+                <div class="project-details">
+                  <div class="project-meta-row">
+                    <span class="project-badge">Full-Stack AI Application</span>
+                    <span class="project-year">Production Ready</span>
+                  </div>
+
+                  <h3 class="project-title">HireSense AI</h3>
+                  <h4 class="project-tagline">Intelligent Resume Screening & Recruitment Platform</h4>
+
+                  <p class="project-desc">
+                    A comprehensive Applicant Tracking System engineered with React, FastAPI, and PostgreSQL. Features secure authentication, recruiter analytics dashboard, AI resume parsing, semantic job matching, ATS scoring, and auto-generated interview questions.
+                  </p>
+
+                  <div class="tech-stack-row">
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill">AI / NLP</span>
+                    <span class="tech-pill">REST APIs</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/hafiz-mhd" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                      <span>Source Code</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <button class="btn btn-secondary btn-sm preview-trigger" data-project="0">
+                      <span>View Architecture</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </article>
+
+            <!-- PROJECT SLIDE 2: Travel Planner Agent -->
+            <article class="project-slide" data-index="1">
+              <div class="project-card card-glass">
+                
+                <div class="project-visual">
+                  <div class="project-art-preview art-travel-agent">
+                    <div class="art-badge">AGENTIC AI • RAG</div>
+                    <div class="art-ui-sim">
+                      <div class="art-ui-header">
+                        <span class="ui-dot dot-r"></span>
+                        <span class="ui-dot dot-y"></span>
+                        <span class="ui-dot dot-g"></span>
+                        <span class="ui-title">Travel Planner Autonomous Agent</span>
+                      </div>
+                      <div class="art-ui-body">
+                        <div class="agent-workflow">
+                          <div class="workflow-step"><span>1</span> Granite RAG</div>
+                          <div class="workflow-arrow">&rarr;</div>
+                          <div class="workflow-step"><span>2</span> ChromaDB Vector</div>
+                          <div class="workflow-arrow">&rarr;</div>
+                          <div class="workflow-step"><span>3</span> Weather API</div>
+                        </div>
+                        <div class="agent-output">
+                          &gt; Day 1: Historic Architecture & Morning Light<br>
+                          &gt; Live Forecast: 22°C Clear • Risk: Minimal
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-details">
+                  <div class="project-meta-row">
+                    <span class="project-badge">Agentic AI Platform</span>
+                    <span class="project-year">Full-Stack</span>
+                  </div>
+
+                  <h3 class="project-title">Travel Planner Agent</h3>
+                  <h4 class="project-tagline">AI-Powered Autonomous Itinerary Generation</h4>
+
+                  <p class="project-desc">
+                    An autonomous itinerary planner powered by React, FastAPI, Python, and SQLAlchemy. Integrates IBM Granite (watsonx.ai) with RAG, ChromaDB vector database, and HuggingFace embeddings alongside OpenWeatherMap API for real-time weather-informed recommendations.
+                  </p>
+
+                  <div class="tech-stack-row">
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">IBM Granite</span>
+                    <span class="tech-pill">ChromaDB</span>
+                    <span class="tech-pill">SQLAlchemy</span>
+                    <span class="tech-pill">OpenWeather API</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/hafiz-mhd" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                      <span>Source Code</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <button class="btn btn-secondary btn-sm preview-trigger" data-project="1">
+                      <span>View Architecture</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </article>
+
+            <!-- PROJECT SLIDE 3: PotAlert (Patented) -->
+            <article class="project-slide" data-index="2">
+              <div class="project-card card-glass">
+                
+                <div class="project-visual">
+                  <div class="project-art-preview art-potalert">
+                    <div class="art-badge patent-tag">PATENT PUBLISHED & OBTAINED</div>
+                    <div class="art-ui-sim">
+                      <div class="art-ui-header">
+                        <span class="ui-dot dot-r"></span>
+                        <span class="ui-dot dot-y"></span>
+                        <span class="ui-dot dot-g"></span>
+                        <span class="ui-title">POT ALERT: SPOT, ALERT, AND REACT</span>
+                      </div>
+                      <div class="art-ui-body">
+                        <div class="vision-scan-box">
+                          <div class="radar-scan"></div>
+                          <div class="pothole-target">
+                            <span class="target-box"></span>
+                            <span class="target-label">YOLOv8: Hazard Detected (0.94)</span>
+                          </div>
+                          <div class="geo-coord">Lat: 9.5916° N • Lon: 76.5222° E • Saved to Firebase</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-details">
+                  <div class="project-meta-row">
+                    <span class="project-badge highlight-badge">Patent Innovation</span>
+                    <span class="project-year">Computer Vision</span>
+                  </div>
+
+                  <h3 class="project-title">PotAlert: Spot.Alert.React</h3>
+                  <h4 class="project-tagline">AI-Based Real-Time Pothole Detection & Geolocation</h4>
+
+                  <p class="project-desc">
+                    Published patent project implementing YOLOv8, OpenCV, Firebase, and React. Real-time vision pipeline captures hazard locations, confidence scores, and timestamps, visualizing risks on an interactive Google Maps telemetry dashboard to prevent road accidents.
+                  </p>
+
+                  <div class="tech-stack-row">
+                    <span class="tech-pill">YOLOv8</span>
+                    <span class="tech-pill">OpenCV</span>
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">Firebase</span>
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">Google Maps API</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/hafiz-mhd" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                      <span>Source Code</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <button class="btn btn-secondary btn-sm preview-trigger" data-project="2">
+                      <span>View Architecture</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </article>
+
+            <!-- PROJECT SLIDE 4: Price Tracker Tool -->
+            <article class="project-slide" data-index="3">
+              <div class="project-card card-glass">
+                
+                <div class="project-visual">
+                  <div class="project-art-preview art-scraper">
+                    <div class="art-badge">AUTOMATION • ANALYTICS</div>
+                    <div class="art-ui-sim">
+                      <div class="art-ui-header">
+                        <span class="ui-dot dot-r"></span>
+                        <span class="ui-dot dot-y"></span>
+                        <span class="ui-dot dot-g"></span>
+                        <span class="ui-title">Price Tracker Data Engine</span>
+                      </div>
+                      <div class="art-ui-body">
+                        <div class="scraper-chart">
+                          <div class="chart-bar" style="height: 40%"><span>$120</span></div>
+                          <div class="chart-bar" style="height: 65%"><span>$145</span></div>
+                          <div class="chart-bar" style="height: 35%"><span>$110</span></div>
+                          <div class="chart-bar active-bar" style="height: 85%"><span>$99 Deal</span></div>
+                        </div>
+                        <div class="scraper-status">
+                          <span>Selenium Worker: Active</span> • <span>Trend: -22% Price Drop</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-details">
+                  <div class="project-meta-row">
+                    <span class="project-badge">Automation & Scraping</span>
+                    <span class="project-year">Web Intelligence</span>
+                  </div>
+
+                  <h3 class="project-title">Price Tracker Tool</h3>
+                  <h4 class="project-tagline">Automated E-Commerce Price Monitor & Trend Predictor</h4>
+
+                  <p class="project-desc">
+                    An end-to-end price surveillance system built with Selenium, Scrapy, and Flask. Collects live price data across multi-vendor e-commerce sites, executing trend prediction and timely discount alerts with a clean HTML/CSS/JS dashboard.
+                  </p>
+
+                  <div class="tech-stack-row">
+                    <span class="tech-pill">Selenium</span>
+                    <span class="tech-pill">Scrapy</span>
+                    <span class="tech-pill">Flask</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">Data Pipelines</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/hafiz-mhd" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                      <span>Source Code</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <button class="btn btn-secondary btn-sm preview-trigger" data-project="3">
+                      <span>View Architecture</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn" id="prevSlideBtn" aria-label="Previous project slide">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <!-- Pagination Dots -->
+            <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Project slide navigation">
+              <!-- Dynamically populated / active -->
+            </div>
+
+            <!-- Autoplay Pause/Play Toggle Button -->
+            <button class="slider-btn autoplay-btn" id="toggleAutoplayBtn" aria-label="Toggle auto slide play" title="Pause / Resume Autoplay">
+              <svg class="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              <svg class="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </button>
+
+            <button class="slider-btn next-btn" id="nextSlideBtn" aria-label="Next project slide">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+
+          <div class="slider-counter" id="sliderCounter" aria-live="polite">
+            <span class="current-slide">01</span> / <span class="total-slides">04</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         6. EXPERIENCE & TIMELINE SECTION
+         ======================================================== -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">JOURNEY & MILESTONES</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-subtitle">A progressive trajectory across industry internships, academic rigor, and verified technical credentials.</p>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- Experience Tab Track -->
+          <div class="timeline-track">
+            
+            <!-- Item 1: NeST Digital -->
+            <div class="timeline-item reveal-item" data-delay="100">
+              <div class="timeline-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-pulse"></span>
+              </div>
+              <div class="timeline-content card-glass" data-tilt>
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-role">Frontend Development Intern</span>
+                    <h3 class="timeline-org">NeST Digital</h3>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">Jun '25 — Jul '25</span>
+                    <span class="timeline-location">Kochi, Kerala</span>
+                  </div>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Designed and implemented responsive UI components using Angular and TypeScript following Agile sprint cycles and team coding standards.</li>
+                  <li>Integrated and debugged REST API calls between frontend components and backend services, resolving data integrity and interface bottlenecks.</li>
+                  <li>Documented technical findings and component behavior to support long-term maintenance and knowledge transfer across the engineering team.</li>
+                </ul>
+                <div class="timeline-tech">
+                  <span class="tech-mini">Angular</span>
+                  <span class="tech-mini">TypeScript</span>
+                  <span class="tech-mini">REST APIs</span>
+                  <span class="tech-mini">Agile</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: Edunet Foundation -->
+            <div class="timeline-item reveal-item" data-delay="200">
+              <div class="timeline-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-pulse"></span>
+              </div>
+              <div class="timeline-content card-glass" data-tilt>
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-role">Emerging Technologies Intern</span>
+                    <h3 class="timeline-org">Edunet Foundation</h3>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">Aug '26 — Sep '26</span>
+                    <span class="timeline-location">Remote, India</span>
+                  </div>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Completed an intensive 4-week program focused on Agentic AI, Cloud Computing, Cyber Security, and Quantum Foundations.</li>
+                  <li>Gained practical exposure to IBM SkillsBuild, IBM Cloud, and IBM BoB ecosystems.</li>
+                  <li>Engineered an industry-relevant AI and Cloud Computing capstone project combining distributed intelligence and containerized microservices.</li>
+                </ul>
+                <div class="timeline-tech">
+                  <span class="tech-mini">Agentic AI</span>
+                  <span class="tech-mini">IBM Cloud</span>
+                  <span class="tech-mini">Cloud Security</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: KELTRON -->
+            <div class="timeline-item reveal-item" data-delay="300">
+              <div class="timeline-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-pulse"></span>
+              </div>
+              <div class="timeline-content card-glass" data-tilt>
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-role">AI and ML Intern</span>
+                    <h3 class="timeline-org">KELTRON</h3>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">Aug '23 — Aug '23</span>
+                    <span class="timeline-location">Kochi, Kerala</span>
+                  </div>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Gained in-depth exposure to Python fundamentals, Machine Learning theory, and modern Artificial Intelligence pipelines.</li>
+                  <li>Studied Supervised vs. Unsupervised Learning paradigms and deep neural network fundamentals.</li>
+                </ul>
+                <div class="timeline-tech">
+                  <span class="tech-mini">Python</span>
+                  <span class="tech-mini">Machine Learning</span>
+                  <span class="tech-mini">Deep Learning</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4: Education - Saintgits (B.Tech) -->
+            <div class="timeline-item reveal-item" data-delay="350">
+              <div class="timeline-marker marker-academic">
+                <span class="marker-dot"></span>
+              </div>
+              <div class="timeline-content card-glass" data-tilt>
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-role">B.Tech in Computer Science & Engineering</span>
+                    <h3 class="timeline-org">Saintgits College of Engineering</h3>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">2022 — 2026</span>
+                    <span class="timeline-location">Kerala, India</span>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Comprehensive engineering curriculum covering operating systems, DBMS, compiler design, software engineering, and computer vision. Active participant in technical symposiums and project showcases.
+                </p>
+                <div class="timeline-tech">
+                  <span class="tech-mini">B.Tech CSE</span>
+                  <span class="tech-mini">Software Engineering</span>
+                  <span class="tech-mini">Event Head, Nakshatra Fest</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5: Education - Higher Secondary (12th) -->
+            <div class="timeline-item reveal-item" data-delay="400">
+              <div class="timeline-marker marker-academic">
+                <span class="marker-dot"></span>
+              </div>
+              <div class="timeline-content card-glass" data-tilt>
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-role">Higher Secondary Education (12th Grade)</span>
+                    <h3 class="timeline-org">Durga Higher Secondary School</h3>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">2020 — 2022</span>
+                    <span class="timeline-location">Kanhangad, Kerala</span>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Completed Higher Secondary studies in the Science stream with a focus on Physics, Chemistry, Mathematics, and Biology.
+                </p>
+                <div class="timeline-tech">
+                  <span class="tech-mini">Class XII</span>
+                  <span class="tech-mini">Science Stream</span>
+                  <span class="tech-mini">Biology Science</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6: Education - Secondary Schooling (10th) -->
+            <div class="timeline-item reveal-item" data-delay="450">
+              <div class="timeline-marker marker-academic">
+                <span class="marker-dot"></span>
+              </div>
+              <div class="timeline-content card-glass" data-tilt>
+                <div class="timeline-header">
+                  <div>
+                    <span class="timeline-role">Secondary Education (10th Grade)</span>
+                    <h3 class="timeline-org">Kendriya Vidyalaya No. 1 CPCRI</h3>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">2019 — 2020</span>
+                    <span class="timeline-location">Kasaragod, Kerala</span>
+                  </div>
+                </div>
+                <p class="timeline-summary">
+                  Completed secondary education under the CBSE board curriculum with core foundations in sciences, mathematics, and active extracurricular engagement.
+                </p>
+                <div class="timeline-tech">
+                  <span class="tech-mini">Class X</span>
+                  <span class="tech-mini">CBSE Board</span>
+                  <span class="tech-mini">Science & Mathematics</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Certifications Showcase Grid -->
+        <div class="cert-block">
+          <h3 class="cert-title text-center">Verified Certifications</h3>
+          <div class="cert-grid">
+            
+            <div class="cert-card card-glass">
+              <div class="cert-icon">🏆</div>
+              <div class="cert-info">
+                <h4>One Million Prompters — Prompt Engineering</h4>
+                <p>Dubai Future Foundation</p>
+              </div>
+            </div>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon">🧠</div>
+              <div class="cert-info">
+                <h4>Getting Started with Artificial Intelligence</h4>
+                <p>IBM SkillsBuild</p>
+              </div>
+            </div>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon">☁️</div>
+              <div class="cert-info">
+                <h4>Journey to Cloud: Envisioning Your Solution</h4>
+                <p>IBM SkillsBuild</p>
+              </div>
+            </div>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon">📊</div>
+              <div class="cert-info">
+                <h4>Data Visualization</h4>
+                <p>VOIS, Vodafone Idea Foundation & Edunet Foundation (Aug '26)</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         7. CONTACT SECTION
+         ======================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Let’s Build Something Remarkable</h2>
+          <p class="section-subtitle">Whether you have an opportunity, an ambitious project, or wish to collaborate, my inbox is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Direct Information Cards -->
+          <div class="contact-info-column">
+            
+            <div class="contact-card card-glass" data-tilt>
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Direct Email</span>
+                <!-- EDITABLE: Replace email below -->
+                <a href="mailto:hafizmuhammedar123@gmail.com" class="contact-card-value">hafizmuhammedar123@gmail.com</a>
+              </div>
+              <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" title="Copy to clipboard">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+
+            <div class="contact-card card-glass" data-tilt>
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Phone & WhatsApp</span>
+                <!-- EDITABLE: Replace phone number below -->
+                <a href="tel:+919747012370" class="contact-card-value">+91 97470 12370</a>
+              </div>
+            </div>
+
+            <div class="contact-card card-glass" data-tilt>
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Current Location</span>
+                <span class="contact-card-value">Kasargod, Kerala, India</span>
+              </div>
+            </div>
+
+            <!-- Professional Social Links -->
+            <div class="social-channels card-glass">
+              <span class="social-label">Connect across platforms:</span>
+              <div class="social-buttons">
+                <!-- EDITABLE: Replace LinkedIn & GitHub links -->
+                <a href="https://www.linkedin.com/in/ar-hafiz-muhammed-783702322" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="LinkedIn profile">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                
+                <a href="https://github.com/hafiz-mhd" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="GitHub profile">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Interactive Form -->
+          <div class="contact-form-column">
+            <div class="form-container card-glass">
+              <h3 class="form-heading">Send a Direct Message</h3>
+              <p class="form-subtitle">Fill in your details below. This form uses standard email routing and can be connected directly to services like Formspree or EmailJS.</p>
+
+              <!-- NOTE FOR PRODUCTION: To receive real emails without backend,
+                   change action to your Formspree endpoint (e.g. action="https://formspree.io/f/YOUR_ID") -->
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="userName" class="form-label">Your Name</label>
+                  <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. Jane Doe" required autocomplete="name">
+                  <span class="field-error" id="nameError">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userEmail" class="form-label">Email Address</label>
+                  <input type="email" id="userEmail" name="email" class="form-input" placeholder="e.g. jane@company.com" required autocomplete="email">
+                  <span class="field-error" id="emailError">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userSubject" class="form-label">Subject</label>
+                  <input type="text" id="userSubject" name="subject" class="form-input" placeholder="e.g. Project Opportunity / Collaboration" required>
+                  <span class="field-error" id="subjectError">Please provide a subject.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage" class="form-label">Message</label>
+                  <textarea id="userMessage" name="message" class="form-input form-textarea" rows="4" placeholder="Share brief project details or message..." required></textarea>
+                  <span class="field-error" id="messageError">Please type a message.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-magnetic" id="submitFormBtn">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+
+                <!-- Feedback Toast Status -->
+                <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       8. FOOTER
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">
+          <span class="logo-mark">AR</span>
+          <span class="logo-text">A R Hafiz Muhammed</span>
+        </a>
+        <p class="footer-tagline">Crafting intelligent systems and cinematic digital interfaces.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> A R Hafiz Muhammed. All rights reserved. Built with pure HTML5, CSS3, &amp; Vanilla JavaScript.
+        </p>
+        <a href="#home" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+          <span>Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       9. ARCHITECTURE MODAL (Interactive Project Deep Dive)
+       ======================================================== -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalProjectTitle">
+    <div class="modal-card card-glass" role="document">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal window">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge" id="modalBadge">SYSTEM ARCHITECTURE</span>
+        <h3 class="modal-title" id="modalProjectTitle">Project Title</h3>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected via script.js -->
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/hafiz-mhd" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modalGithubBtn">
+          <span>View on GitHub</span>
+        </a>
+        <button class="btn btn-secondary btn-sm" id="modalDismissBtn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
